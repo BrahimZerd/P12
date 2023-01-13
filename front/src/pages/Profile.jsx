@@ -4,20 +4,20 @@ import Bonjour from '../components/Bonjour'
 import { useParams } from 'react-router-dom'
 import getMockedDataById from '../data/getMockeddata'
 import { useEffect, useState } from 'react'
-
+import EnergyIndicator from '../components/BurnedEnergy'
 
 function Profile() {
 
-    const [main, setMain] = useState({});
+    const [user, setUser] = useState({});
     
 
     
     const {id} = useParams();
         useEffect(() => {
-            getMockedDataById(id, setMain);
-        }, []);
+            getMockedDataById(id, setUser);
+        }, [id]);
         
-        console.log(main)
+       console.log(user)
         
 
 return(
@@ -26,9 +26,11 @@ return(
         
         <Header />
         <Bonjour 
-        userInfos = {main.userInfos}
+        userInfos = {user.userInfos}
+        todayScore = {user.todayScore}
          />
-        
+        {user.keyData.map(indicator => 
+            <EnergyIndicator {...indicator} />)}
         <Aside />
     
     </div>

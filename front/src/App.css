@@ -4,8 +4,37 @@ body{
   font-size: 50px;
   margin: 0 auto;
  font-family: 'Roboto', sans-serif;
-  
+ text-align: center;
+}
 
+aside{
+  background-color: #020203;
+  height: 1024px;
+  width: 117px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.athleteButton span{
+  border: solid 2px black;
+  border-radius: 15px;
+  margin-right: 50px;
+  text-align: center;
+  width:200px;
+  margin-bottom: 25px;
+}
+.athleteButton span:hover {
+  background-color: black;
+  color:#FFFFFF;
+}
+.red {
+  color: #FF0101;
+ 
+}
+#Bonjour {
+  font-weight: 500;
+  width:fit-content;
+  position: absolute;
+  left: 255px;
+  top: 119px;
 }
 
 .headerDiv {
@@ -17,13 +46,13 @@ body{
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 #titleID {
-  margin-left: 20px;
+  margin-left: 15px;
   margin-bottom: 12px;
 }
 .logoDiv {
 width: 200px;
 padding-top: 20px;
-padding-left: 29px;
+padding-left: 20px;
 }
 .navigationHeader {
   display: flex;
@@ -33,9 +62,46 @@ padding-left: 29px;
   justify-content:space-evenly;
   
 }
+
+span {
+  color:#020203;
+}
 a {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 
   text-decoration: none;
   color: white;
+}
+
+.asideNav {
+  display: flex;
+  padding: 26px;
+  flex-direction: column;
+}
+
+
+#zen{
+  margin-top: 250px;
+}
+#zen,
+#swim,
+#strength,
+#bike{
+  
+
+
+  display: block;
+  width: 64px;
+  height: 64px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  position: relative;
+  
+
+}
+
+aside img {
+  position: absolute;
+  top:17px;
+  left: 15px;
 }

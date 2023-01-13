@@ -1,11 +1,30 @@
 import '../App.css';
-import Header from '../components/Header'
+import mock from '../data/mock'
+import ButtonAccess from '../components/ButtonAccessAthlete';
 
 
    function App() {
     return (
+     <div>
+    
+      <div >
+         <p>Access via Mocked Data</p>
+      </div>
+    {mock.USER_MAIN_DATA.map((user) => {
 
-    <Header /> )
+      return(
+    <ButtonAccess {...user} key={user.id}
+    
+    />)})
+    }
+   <div>
+      <p> Acces via API Data
+      </p>
+   </div>
+    
+    </div> 
+    
+    )
     }
 
     export default App;

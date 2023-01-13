@@ -1,12 +1,20 @@
 import mock from './mock';
 import { useParams } from 'react-router-dom';
+import getUserData from '../classes/MainData'
 
 
-function getMockedDataById () {
+export default function getMockedDataById(id, setMain) {
 
-    const {id} = useParams
+    const userId = parseInt(id)
+        
+        setMain (new getUserData
+     (mock.USER_MAIN_DATA.find(element => element.id === userId)),
+     
+     )
+    
+    
+    
+    }
 
-    const getId = mock.USER_MAIN_DATA.find(element => element.id === id)
 
 
-}
