@@ -36,6 +36,60 @@ aside{
   left: 255px;
   top: 119px;
 }
+#Calories,
+#Glucides,
+#Lipides,
+#Proteines{
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  mix-blend-mode: normal;
+  position: absolute;
+}
+#Calories img,
+#Glucides img,
+#Lipides img,
+#Proteines img{
+  top:18px;
+  position: absolute;
+  left:22px;
+}
+#Calories {
+  background: #ffdcdc;
+  
+}
+#Proteines {
+ background: rgba(74, 184, 255, 0.1);;
+}
+
+#Glucides {
+  background:rgba(249, 206, 35, 0.2);
+}
+#Lipides {
+  background: rgba(253, 81, 129, 0.1);
+}
+.greyPolicy{
+  font-weight: 500;
+  color: #74798C;
+  font-size: 14px;
+}
+
+.Calories,
+.Glucides,
+.Lipides,
+.Proteines {
+  width: 258px;
+  height: 124px;
+  margin-bottom: 39px;
+}
+
+.categories{
+  font-weight: 700;
+  font-size: 20px;
+  position: absolute;
+  right: 5%;
+  top: 40%;
+}
 
 .headerDiv {
   background-color: #020203;

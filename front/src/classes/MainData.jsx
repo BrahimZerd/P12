@@ -1,4 +1,7 @@
-
+import proteinIcon from '../assets/proteinIcon.png';
+import lipideIcon from '../assets/lipideIcon.svg';
+import glucideIcon from '../assets/glucideIcon.png';
+import caloriesIcon from '../assets/caloriesIcon.png';
 
 export default class getUserData {
 
@@ -12,27 +15,31 @@ export default class getUserData {
        
         this.keyData = [
             {
-                unit: 'Kcal',
-                amount: user.keyData.calorieCount,
-                icon: '',
+                id: 1,
+                unit: 'kCal',
+                amount: user.keyData.calorieCount ,
+                icon: caloriesIcon,
                 product: 'Calories'
             },
-            {
+            {   
+                id: 2,
                 unit:'g',
                 amount: user.keyData.proteinCount,
-                icon: '',
+                icon: proteinIcon,
                 product: 'Proteines'
             },
-            {
+            {   
+                id: 3,
                 unit:'g',
                 amount: user.keyData.carbohydrateCount,
-                icon: '',
+                icon: glucideIcon,
                 product: 'Glucides'
             },
-            {
+            {   
+                id: 4,
                 unit: 'g',
                 amount: user.keyData.lipidCount,
-                icon: '',
+                icon: lipideIcon,
                 product: 'Lipides'
             }
         ]

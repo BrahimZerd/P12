@@ -17,22 +17,30 @@ function Profile() {
             getMockedDataById(id, setUser);
         }, [id]);
         
-       console.log(user)
-        
+       
+        console.log(user)
 
 return(
     <div>
-        
-        
+       {user.keyData ? 
+        <div>
         <Header />
+        
         <Bonjour 
         userInfos = {user.userInfos}
         todayScore = {user.todayScore}
          />
+         <div className="categories">
         {user.keyData.map(indicator => 
-            <EnergyIndicator {...indicator} />)}
-        <Aside />
-    
+            <EnergyIndicator
+            
+
+            {...indicator} key={indicator.id} />)}
+            </div>
+        <Aside /> 
+        
+        </div>
+        : <div>No DataFound</div>}
     </div>
 )
 
