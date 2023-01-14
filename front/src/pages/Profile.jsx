@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom'
 import getMockedDataById from '../data/getMockeddata'
 import { useEffect, useState } from 'react'
 import EnergyIndicator from '../components/BurnedEnergy'
+import InsentiveSentence from '../components/Incentive'
 
 function Profile() {
 
@@ -29,6 +30,10 @@ return(
         <Bonjour 
         userInfos = {user.userInfos}
         todayScore = {user.todayScore}
+         />
+         <InsentiveSentence 
+         score = {user.score}
+         todayScore = {user.todayScore}
          />
          <div className="categories">
         {user.keyData.map(indicator => 

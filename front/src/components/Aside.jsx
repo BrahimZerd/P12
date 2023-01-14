@@ -15,6 +15,7 @@ return(
             <Link id="bike" to=""><img src={Bike} alt="bike" /></Link>
             <Link id="strength" to=""><img src={Strength} alt="strength" /></Link>
         </nav>
+        <span className="lateral">Copyright, SportSee 2020</span>
     </aside>
 )
 

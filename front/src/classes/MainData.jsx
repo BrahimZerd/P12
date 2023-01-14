@@ -12,7 +12,6 @@ export default class getUserData {
         this.score = user.score;
 
        
-       
         this.keyData = [
             {
                 id: 1,

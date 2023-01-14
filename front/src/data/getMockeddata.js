@@ -1,5 +1,4 @@
 import mock from './mock';
-import { useParams } from 'react-router-dom';
 import getUserData from '../classes/MainData'
 
 
