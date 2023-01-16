@@ -10,16 +10,19 @@ import InsentiveSentence from '../components/Incentive'
 function Profile() {
 
     const [user, setUser] = useState({});
+    const [activity, setActivity] = useState({})
+    const [averageSessions, setAverage] = useState( {})
+    const [performance, setPerformance] = useState({})
     
 
     
     const {id} = useParams();
         useEffect(() => {
-            getMockedDataById(id, setUser);
+            getMockedDataById(id, setUser, setActivity, setAverage,setPerformance);
         }, [id]);
         
        
-        console.log(user)
+        console.log(averageSessions,activity,user,performance)
 
 return(
     <div>
@@ -38,8 +41,6 @@ return(
          <div className="categories">
         {user.keyData.map(indicator => 
             <EnergyIndicator
-            
-
             {...indicator} key={indicator.id} />)}
             </div>
         <Aside /> 

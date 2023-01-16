@@ -113,6 +113,14 @@ position: relative;
 left: 15px;
 bottom:20px;
 }
+.insentive{
+  font-size: 18px;
+  display: block;
+  width:fit-content;
+  position: absolute;
+  left: 252px;
+  top: 252px;
+}
 
 .headerDiv {
   background-color: #020203;
