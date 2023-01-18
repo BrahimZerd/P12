@@ -6,6 +6,7 @@ import getMockedDataById from '../data/getMockeddata'
 import { useEffect, useState } from 'react'
 import EnergyIndicator from '../components/BurnedEnergy'
 import InsentiveSentence from '../components/Incentive'
+import ChartLine from '../components/ChartLinePerformance'
 
 function Profile() {
 
@@ -22,13 +23,14 @@ function Profile() {
         }, [id]);
         
        
-        console.log(averageSessions,activity,user,performance)
+        console.log(averageSessions)
 
 return(
     <div>
        {user.keyData ? 
         <div>
         <Header />
+        <Aside /> 
         
         <Bonjour 
         userInfos = {user.userInfos}
@@ -38,12 +40,18 @@ return(
          score = {user.score}
          todayScore = {user.todayScore}
          />
+        
+         
          <div className="categories">
         {user.keyData.map(indicator => 
             <EnergyIndicator
             {...indicator} key={indicator.id} />)}
             </div>
-        <Aside /> 
+            <ChartLine 
+            
+            />
+        
+        
         
         </div>
         : <div>No DataFound</div>}
