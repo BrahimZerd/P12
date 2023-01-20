@@ -17,7 +17,7 @@ export default function getMockedDataById(id, setUser, setActivity, setAverageSe
         (mock.USER_ACTIVITY.find(element => element.userId ===userId)))
 
     setAverageSessions(new getUserAverageSessions(
-        mock.USER_AVERAGE_SESSIONS.find(element => element.userId = userId)
+        mock.USER_AVERAGE_SESSIONS.find(element => element.userId === userId)
     ))
         
     setPerformance(new getPerformanceData(

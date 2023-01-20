@@ -7,6 +7,9 @@ import { useEffect, useState } from 'react'
 import EnergyIndicator from '../components/BurnedEnergy'
 import InsentiveSentence from '../components/Incentive'
 import ChartLine from '../components/ChartLinePerformance'
+import BarChartScore from '../components/ScoreBarchart'
+
+
 
 function Profile() {
 
@@ -22,8 +25,6 @@ function Profile() {
             getMockedDataById(id, setUser, setActivity, setAverage,setPerformance);
         }, [id]);
         
-       
-        console.log(averageSessions)
 
 return(
     <div>
@@ -36,6 +37,10 @@ return(
         userInfos = {user.userInfos}
         todayScore = {user.todayScore}
          />
+          <BarChartScore 
+          activity = {activity.sessions}
+          
+          />
          <InsentiveSentence 
          score = {user.score}
          todayScore = {user.todayScore}
@@ -47,7 +52,12 @@ return(
             <EnergyIndicator
             {...indicator} key={indicator.id} />)}
             </div>
+           
             <ChartLine 
+          
+            array={averageSessions.sessions}
+            userId={averageSessions.userId}
+            
             
             />
         

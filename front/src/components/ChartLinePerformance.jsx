@@ -1,117 +1,68 @@
-import React, { PureComponent } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, ReferenceArea, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { useState } from 'react';
-const data = [
-  {
-    name: 'L',
-    uv: 40,
-    
-  },
-  {
-    name: 'M',
-    uv: 30,
-  
-  },
-  {
-    name: 'M',
-    uv: 20,
-    
-  },
-  {
-    name: 'J',
-    uv: 20,
-    
-  },
-  {
-    name: 'V',
-    uv: 90,
-    
-  },
-  {
-    name: 'S',
-    uv: 23,
-    
-  },
-  {
-    name: 'D',
+import React from 'react';
+import { LineChart, Line, XAxis, ReferenceArea,  Tooltip } from 'recharts';
+
+
+
+
+export default function ChartLine(props) {
    
-    uv: 43,
-   
-  },
-  
-];
-
-export default function ChartLine() {
-
-    const [showCircle, setShowCircle] = useState(false);
-
-  const onMouseOver = () => {
-    setShowCircle(true);
-  };
-
-  const onMouseOut = () => {
-    setShowCircle(false);
-  };
-
     const CustomTooltip = ({ active, payload }) => {
         if (active && payload && payload.length) {
           return (
             <div className="custom-tooltip">
               <p className="label">{`${payload[0].value} min`}</p>
-             
-              
             </div>
+            
           );
         }
       
         return null;
       };
-
-
+     
 
     return (
-        
+    <div>
+      <p className="customLinechart">Durée moyenne des  sessions</p>
       <LineChart
-      
-      
-      
-       style={{position: 'absolute'}}
-       
-        width={358}
+        style={{position: 'absolute'}}
+        width={258}
         height={263}
-        
-        data={data}
-       
+        data={props.array}
       >
-        <XAxis  
-    
-        
-        
-        axisLine={false} 
-        tickLine={false}
-        
-        tick={{fontSize: "12px" }}
-        
-         dataKey="name" />
-         
-        
-         <Tooltip
-         contentStyle={{backgroundColor:'blue'}} 
-         cursor={false}
-         content={<CustomTooltip />}/>
-         
-        <Line
-        strokeLinecap="round"
-            strokeWidth={2}
-           
-          
-          type="monotone"
-          dataKey="uv"
-          stroke="#FFFFFF"
-          dot={false}
-          activeDot={{ r: 7 }}
+
+      <XAxis  
+       axisLine={false} 
+       tickLine={false}
+       tick={{fontSize: "12px" }}
+       dataKey="day" 
+      />
+
+      <Tooltip
+        contentStyle={{backgroundColor:'blue'}} 
+        cursor={false}
+        content={<CustomTooltip />}
+      />
+
+     <Line
+      strokeLinecap="round"
+      strokeWidth={1.5}
+      activeDot={{
+        fill: '#fff',
+        stroke: 'rgba(255, 255, 255, 0.2)',
+        strokeWidth: 8,
+        r: 4,
+        className: 'boxShadow',
+      }}
+      stroke='#FFFFFF'
+      type="monotone"
+      dataKey="sessionLength"
+      dot={false}
         />
-        <text className="customLinechart"x="20" y="40">Durée moyenne des <br></br> sessions</text>
+      <ReferenceArea 
+        content={<CustomTooltip />}
+        />
+        
       </LineChart>
+      </div>
     );
   }
