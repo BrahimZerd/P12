@@ -8,6 +8,7 @@ import EnergyIndicator from '../components/BurnedEnergy'
 import InsentiveSentence from '../components/Incentive'
 import ChartLine from '../components/ChartLinePerformance'
 import BarChartScore from '../components/ScoreBarchart'
+import RadialBarChart from '../components/RadialChart'
 
 
 
@@ -52,17 +53,15 @@ return(
             <EnergyIndicator
             {...indicator} key={indicator.id} />)}
             </div>
-           
+        <div className="flexCharts">   
             <ChartLine 
           
             array={averageSessions.sessions}
-            userId={averageSessions.userId}
-            
-            
+            userId={averageSessions.userId}/>
+        <RadialBarChart 
             />
-        
-        
-        
+        </div>
+            
         </div>
         : <div>No DataFound</div>}
     </div>

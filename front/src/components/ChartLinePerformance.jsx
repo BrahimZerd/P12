@@ -38,7 +38,6 @@ export default function ChartLine(props) {
       />
 
       <Tooltip
-        contentStyle={{backgroundColor:'blue'}} 
         cursor={false}
         content={<CustomTooltip />}
       />
