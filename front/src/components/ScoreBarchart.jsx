@@ -21,10 +21,10 @@ import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Bar, Legend } from "rec
   <p className="barChartTitle">Activité quotidienne</p>
   <BarChart
   style={{background: "#FFFFFF"}}  
-
+  
   barSize={7}
   barGap={9} 
-  width={835} 
+  width={895} 
   height={220} 
   data={props.activity}>
     <CartesianGrid strokeDasharray="3 3"

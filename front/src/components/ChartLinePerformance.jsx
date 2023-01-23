@@ -22,14 +22,13 @@ export default function ChartLine(props) {
 
     return (
     <div>
-      <p className="customLinechart">Durée moyenne des  sessions</p>
+      
       <LineChart
-        style={{position: 'absolute'}}
+        
         width={258}
         height={263}
         data={props.array}
       >
-
       <XAxis  
        axisLine={false} 
        tickLine={false}

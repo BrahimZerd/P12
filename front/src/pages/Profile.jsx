@@ -9,6 +9,7 @@ import InsentiveSentence from '../components/Incentive'
 import ChartLine from '../components/ChartLinePerformance'
 import BarChartScore from '../components/ScoreBarchart'
 import RadialBarChart from '../components/RadialChart'
+import Gaugechart from '../components/GaugeChart'
 
 
 
@@ -18,12 +19,13 @@ function Profile() {
     const [activity, setActivity] = useState({})
     const [averageSessions, setAverage] = useState( {})
     const [performance, setPerformance] = useState({})
+    const [score, setScore] = useState({})
     
 
     
     const {id} = useParams();
         useEffect(() => {
-            getMockedDataById(id, setUser, setActivity, setAverage,setPerformance);
+            getMockedDataById(id, setUser, setActivity, setAverage,setPerformance,setScore);
         }, [id]);
         
 
@@ -32,7 +34,6 @@ return(
        {user.keyData ? 
         <div>
         <Header />
-        <Aside /> 
         
         <Bonjour 
         userInfos = {user.userInfos}
@@ -59,7 +60,11 @@ return(
             array={averageSessions.sessions}
             userId={averageSessions.userId}/>
         <RadialBarChart 
+            performance={performance}
             />
+        <Gaugechart 
+           score= {[score]} 
+        />    
         </div>
             
         </div>

@@ -32,9 +32,7 @@ aside{
 #Bonjour {
   font-weight: 500;
   width:fit-content;
-  position: absolute;
-  left: 255px;
-  top: 119px;
+ 
 }
 #Calories,
 #Glucides,
@@ -77,21 +75,19 @@ aside{
 }
 .customLinechart{
   
-  z-index: 1;
-  bottom: 12%;
   color: #FFFFFF;
   opacity: 0.5;
   text-align: left;
   font-weight: 500;
   font-size: 15px;}
   .barChartscoreDiv {
-    z-index: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 16vh;
     
-    bottom: 350px;
     
   }
   .barChartscoreDiv svg {
-    padding: 50px;
     border-radius: 5px;
     background: #FBFBFB;
   }
@@ -230,8 +226,11 @@ a {
 
 }
 .flexCharts {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 258px 258px 258px;
+  gap: 60px;
+  justify-content: center;
+  margin-top: 135px;
   
 }
 .custom-tooltipBarchart{

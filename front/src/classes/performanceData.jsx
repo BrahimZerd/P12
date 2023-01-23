@@ -1,30 +1,44 @@
+const newKind = {
+	1: "6",
+	2: "5",
+	3: "4",
+	4: "3",
+	5: "2",
+	6: "1",
+};
+    
+const translateKind = {
+    6: 'Cardio',
+    5: 'Energie',
+    4: 'Endurance',
+    3: 'Force',
+    2: 'Vitesse',
+    1:'Intensité',
+}
+
 
 
 
 export default  class getPerformanceData {
     constructor(user) {
-        this.userId = user.userId
-        this.kind = [
-            {
-                1:'cardio'
-            },
-            {
-                2:'energy'
-            },
-            {
-                3:'endurance'
-            },
-            {
-                4: 'strength'
-            },
-            {
-                5:'speed'
-            },
-            {
-                6:'intensity'
-            }
-        ]
+        
+        this.data = user.data.map((element) => ({
+            
+            kind: translateKind[newKind[element.kind]],
+            value: element.value,
+            
 
-        this.data = user.data
+
+        })
+        
+        )
+       this.kind = user.kind
+    
+    
     }
-}
+
+
+       
+
+       
+    }
