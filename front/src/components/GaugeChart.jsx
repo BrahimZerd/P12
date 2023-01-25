@@ -21,10 +21,8 @@ const style = {
 
 export default function Gaugechart (props) {
 
-    console.log(data)
-    console.log(props.score)
+   
     const CustomLabel = props => {
-        console.log(props);
         return (
           <g>
             

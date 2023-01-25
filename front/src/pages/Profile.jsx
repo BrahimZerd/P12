@@ -10,7 +10,7 @@ import ChartLine from '../components/ChartLinePerformance'
 import BarChartScore from '../components/ScoreBarchart'
 import RadialBarChart from '../components/RadialChart'
 import Gaugechart from '../components/GaugeChart'
-
+import getApiDataById from '../data/getAPIdata'
 
 
 function Profile() {
@@ -24,9 +24,19 @@ function Profile() {
 
     
     const {id} = useParams();
+
+    //condition d'utilisation des datas mock ou API ( faire une fonction getAppiDataById)
         useEffect(() => {
             getMockedDataById(id, setUser, setActivity, setAverage,setPerformance,setScore);
         }, [id]);
+
+
+        
+
+        /*useEffect(() => {
+           getApiDataById(id, setUser, setActivity, setAverage,setPerformance,setScore);
+        }, [id]); */
+        
         
 
 return(
@@ -39,22 +49,24 @@ return(
         userInfos = {user.userInfos}
         todayScore = {user.todayScore}
          />
-          <BarChartScore 
-          activity = {activity.sessions}
           
-          />
          <InsentiveSentence 
          score = {user.score}
          todayScore = {user.todayScore}
          />
-        
-         
+        <div className="flexMain">
+        <Aside />
+        <BarChartScore 
+          activity = {activity.sessions}
+          
+          />
+          
          <div className="categories">
         {user.keyData.map(indicator => 
             <EnergyIndicator
             {...indicator} key={indicator.id} />)}
             </div>
-        <div className="flexCharts">   
+            <div className="flexCharts">   
             <ChartLine 
           
             array={averageSessions.sessions}
@@ -66,6 +78,9 @@ return(
            score= {[score]} 
         />    
         </div>
+            
+        </div>    
+        
             
         </div>
         : <div>No DataFound</div>}

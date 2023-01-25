@@ -11,7 +11,7 @@ export default function getMockedDataById(id, setUser, setActivity, setAverageSe
         
         setUser (new getUserData
      (mock.USER_MAIN_DATA.find(element => element.id === userId)),
-     
+     console.log(mock.USER_MAIN_DATA)
      )
 
      setActivity(new getUserActivity

@@ -59,7 +59,8 @@ export default function ChartLine(props) {
       <ReferenceArea 
         content={<CustomTooltip />}
         />
-        
+        <text fill="white" opacity={0.5} className="textSession"x={35} y={35}>Durée moyenne des</text>
+        <text fill="white" opacity={0.5} x={35} y={55}>sessions</text>
       </LineChart>
       </div>
     );
