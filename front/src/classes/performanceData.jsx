@@ -26,19 +26,7 @@ export default  class getPerformanceData {
             
             kind: translateKind[newKind[element.kind]],
             value: element.value,
-            
-
-
-        })
-        
-        )
+            }))
        this.kind = user.kind
-    
-    
     }
-
-
-       
-
-       
-    }
+}

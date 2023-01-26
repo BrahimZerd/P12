@@ -15,12 +15,12 @@ function Header() {
                     <img id="titleID" src={Title} alt="Title" />
                 </div>
                 
-            <nav className="navigationHeader">
-                <Link to ="">Accueil</Link>
-                <Link to ="">Profil</Link>
-                <Link to ="">Réglage</Link>
-                <Link to="">Communauté</Link>
-            </nav>
+                <nav className="navigationHeader">
+                    <Link to ="">Accueil</Link>
+                    <Link to ="">Profil</Link>
+                    <Link to ="">Réglage</Link>
+                    <Link to="">Communauté</Link>
+                </nav>
             </div>
         </header>
     )

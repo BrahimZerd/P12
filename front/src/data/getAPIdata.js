@@ -23,6 +23,7 @@ export default async function getApiDataById(id, setUser, setActivity, setAverag
 
     let userActivity = await fetch(userUrl+activity)
     .then(data => data.json())
+    
     .catch((error) =>
         console.log('Il y a eu un problème avec l\'opération fetch '));
       

@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 
 
 function insentiveSentence (props){
@@ -10,5 +10,10 @@ function insentiveSentence (props){
     )
 }
 
+insentiveSentence.propTypes = {
+    props: PropTypes.object,
+    score: PropTypes.number,
+    todayScore: PropTypes.number
+}
 
 export default insentiveSentence;

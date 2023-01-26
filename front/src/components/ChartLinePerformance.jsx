@@ -1,23 +1,22 @@
 import React from 'react';
 import { LineChart, Line, XAxis, ReferenceArea,  Tooltip } from 'recharts';
+import PropTypes from 'prop-types';
 
 
 
 
 export default function ChartLine(props) {
    
-    const CustomTooltip = ({ active, payload }) => {
-        if (active && payload && payload.length) {
-          return (
-            <div className="custom-tooltip">
+  const CustomTooltip = ({ active, payload }) => {
+    if (active && payload && payload.length) {
+      return (
+          <div className="custom-tooltip">
               <p className="label">{`${payload[0].value} min`}</p>
-            </div>
-            
-          );
-        }
-      
-        return null;
-      };
+          </div>
+      );
+    }
+    return null;
+  };
      
 
     return (
@@ -64,4 +63,10 @@ export default function ChartLine(props) {
       </LineChart>
       </div>
     );
+  }
+
+
+  ChartLine.propTypes = {
+    props: PropTypes.object,
+    array: PropTypes.array,
   }

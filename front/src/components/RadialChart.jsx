@@ -1,10 +1,10 @@
 import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis,ResponsiveContainer } from 'recharts';
+import PropTypes from 'prop-types';
 
 
 
 export default function RadialBarChart (props){
- 
   
     return (
         <div  className="radialChart" style={{ width: '263px', height: "258px" }}>
@@ -19,4 +19,11 @@ export default function RadialBarChart (props){
       </div>
     );
   
+}
+
+
+RadialBarChart.propTypes = {
+  props: PropTypes.object,
+  performance: PropTypes.object,
+  data: PropTypes.array
 }

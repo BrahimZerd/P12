@@ -1,38 +1,22 @@
 import React from 'react';
-import { RadialBarChart, RadialBar, Legend, LabelList,  ResponsiveContainer } from 'recharts';
+import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts';
+import PropTypes from 'prop-types';
 
-const data = [
-  {
-    name: '18-24',
-    uv: 31.47,
-    pv: 2400,
-    fill: '#8884d8',
-  },
-  
- 
-];
 
-const style = {
-  top: '50%',
-  right: 0,
-  transform: 'translate(0, -50%)',
-  lineHeight: '24px',
-};
 
 export default function Gaugechart (props) {
 
-   
     const CustomLabel = props => {
         return (
           <g>
             
-            <text x={props.viewBox.x} y={props.viewBox.y} fill="#111" dy={120} dx={130} fontSize={18} fontWeight={700}>
+            <text fill="#111" y={110} x={120} fontSize={18} fontWeight={700}>
               {props.value}  % 
             </text>
-            <text  dy={145} dx={120} fill="#74798C" fontSize={18} fontWeight={700} >
+            <text  y={145} x={110} fill="#74798C" fontSize={18} fontWeight={700} >
               de votre 
             </text>
-            <text  dy={170} dx={122} fill="#74798C" fontSize={18} fontWeight={700}>
+            <text  y={170} x={112} fill="#74798C" fontSize={18} fontWeight={700}>
               objectif
             </text>
           </g>
@@ -52,7 +36,7 @@ export default function Gaugechart (props) {
           <RadialBar
             cornerRadius={5}
             minAngle={65}
-           label={CustomLabel }
+           label={CustomLabel}
             clockWise
             dataKey="todayScore" 
             fill='#FF0000'
@@ -71,4 +55,10 @@ export default function Gaugechart (props) {
       </ResponsiveContainer>
       </div>
     );
+  }
+
+
+  Gaugechart.propTypes =  {
+    props: PropTypes.object,
+    score: PropTypes.array
   }

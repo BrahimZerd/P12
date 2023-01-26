@@ -9,7 +9,6 @@ export default class getUserScore {
        
         this.todayScore = 
             user.todayScore * 100 || user.score * 100
-        
       
         
     }}

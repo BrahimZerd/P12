@@ -21,21 +21,26 @@ function Profile() {
     const [performance, setPerformance] = useState({})
     const [score, setScore] = useState({})
     
-
     
     const {id} = useParams();
-
-    //condition d'utilisation des datas mock ou API ( faire une fonction getAppiDataById)
+        
         useEffect(() => {
-            getMockedDataById(id, setUser, setActivity, setAverage,setPerformance,setScore);
-        }, [id]);
+           if(localStorage.environment === "mock"){
+            getMockedDataById(id, setUser, setActivity, setAverage,setPerformance,setScore,)
+            
+            }
+            
+            else {
+                getApiDataById(id, setUser, setActivity, setAverage,setPerformance,setScore,);
+
+            }
+        }
+        , [id]);
+        
 
 
         
 
-        /*useEffect(() => {
-           getApiDataById(id, setUser, setActivity, setAverage,setPerformance,setScore);
-        }, [id]); */
         
         
 
