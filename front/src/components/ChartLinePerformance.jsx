@@ -3,7 +3,10 @@ import { LineChart, Line, XAxis, ReferenceArea,  Tooltip } from 'recharts';
 import PropTypes from 'prop-types';
 
 
-
+/**Chartline is a chart graph from Rechart framework displaying the average length session of a week
+ * @param {Object} props contains user session length of the week
+ * @param {Bool} active check if the tooltip is active or not
+  */
 
 export default function ChartLine(props) {
    

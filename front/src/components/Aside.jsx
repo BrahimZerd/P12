@@ -4,7 +4,7 @@ import Swim from '../assets/Swim.png';
 import Bike from '../assets/Bike.png';
 import Strength from '../assets/Strength.png';
 
-
+/** Aside component display the nav bar on the side */
 
 function aside(){
 return(

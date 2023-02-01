@@ -3,7 +3,10 @@ import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
 
 
-
+/**Gaugechart return a component represent the % of the objectiv necessary to reach a goal fixed by the athlete
+ * @param {Object} props contains 2 differents score // we used to modify the class to get only 1 score and put it in a percentage radial chart
+ * @param {array} score if the array which contain the 2 score recombine in 1 score.
+  */
 export default function Gaugechart (props) {
 
     const CustomLabel = props => {

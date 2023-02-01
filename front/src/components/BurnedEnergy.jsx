@@ -1,5 +1,10 @@
 import PropTypes from 'prop-types';
 
+
+
+/**Energy indicator is a re-usable component which integrate and display general information like total calories burned, protein, glucid & lipid 
+ * @param {Object} props is the object that countain the icon of the element and the number of that element, that display the total of category burned
+  */
 function EnergyIndicator (props) {
     return(
         <div className={props.product}>

@@ -4,6 +4,12 @@ import PropTypes from 'prop-types';
 
 
 
+/**Radialbarchart is a chart that show the athlete the best & worst kind of performance he has, and where he should practice to up these perf
+ * @param {Object} props contains user kinds + for each kinds, the performance
+ * @param {array} data contains the array of performance
+  */
+
+
 export default function RadialBarChart (props){
   
     return (

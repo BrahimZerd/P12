@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../assets/Logo.png'
 import Title from '../assets/Title.png'
 
-
+//** header return the header component with a nav bar link to the different pages // pages still not linked */
 
 function Header() {
 
