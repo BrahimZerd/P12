@@ -5,71 +5,34 @@ import ButtonAccess from '../components/ButtonAccessAthlete';
 
 function clickDev() {
 	localStorage.setItem('environment', 'mock');
-   console.log('enviMock')
 }
 function clickAPI() {
 	localStorage.setItem('environment', 'api');
-   console.log('enviAPI')
 }
-
+//create 2differentes storage, called environement api & environement mock / if i click on 2 buttons of mocks i can access to mocked data & if i click on 2 buttons of api i can access
+// to API data
 
    function App() {
-     
-
-      
-
-
-      
-    return (
+     return (
      <div >
-    
-      <div onClick={clickDev}>
-         <p >Access via Mocked Data</p>
-      
-    {mock.USER_MAIN_DATA.map((user) => {
-      
-      return(
-         
-    <ButtonAccess {...user} key={user.id}
-    
-    
-    />)},
-    
-    
-    
-    )
-    }
-   </div>
-   <div >
-         <p>Access via API DATA</p>
-      </div>
-      {mock.USER_MAIN_DATA.map((user) => {
+            <div key='id1' onClick={clickDev}>
+               <p >Access via Mocked Data</p>
+               {mock.USER_MAIN_DATA.map((user) => {
+            return(<ButtonAccess {...user} key={user.id+1}/>)},
+            )}
+            </div>
 
-return(
-   
-   <div id="APIData" onClick={clickAPI} > 
-<ButtonAccess {...user} key={user.id}
+            <div>
+             <p>Access via API DATA</p>
+            <div onClick={clickAPI} > 
+            {mock.USER_MAIN_DATA.map((user) => {
 
-/>
-
-</div>)
-
-},
-
-
-)
-  
-}
+            return(<ButtonAccess {...user} key={user.id}/>)},)
+            }
+            </div>
+            </div>
     </div>
-    
-   
-
-    
-    
-    
-    )
-    
-    }
+    )}
 
     export default App; 
     

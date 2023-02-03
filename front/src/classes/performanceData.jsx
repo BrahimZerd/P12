@@ -1,3 +1,11 @@
+
+/**getperformancedata format the data from the API or mocked data from performance data to have an easy access to them in the components 
+ newkind & translate kind etablish a new order to display them as attempt in the graph
+
+*/
+
+
+
 const newKind = {
 	1: "6",
 	2: "5",

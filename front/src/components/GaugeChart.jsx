@@ -9,6 +9,8 @@ import PropTypes from 'prop-types';
   */
 export default function Gaugechart (props) {
 
+
+  
     const CustomLabel = props => {
         return (
           <g>
@@ -26,7 +28,7 @@ export default function Gaugechart (props) {
         );
       };
 
-    
+    console.log(props.score)
     return (
         <div className="gaugechart"  style={{ width: '263px', height: "258px",}}>
       <ResponsiveContainer >

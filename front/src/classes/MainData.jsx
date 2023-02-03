@@ -3,6 +3,9 @@ import lipideIcon from '../assets/lipideIcon.svg';
 import glucideIcon from '../assets/glucideIcon.png';
 import caloriesIcon from '../assets/caloriesIcon.png';
 
+/**getuserdata format the data from the API or mocked data from basic informations such as id or userinfos to have an easy access to them in the components 
+ 
+*/
 export default class getUserData {
 
     constructor(user){
