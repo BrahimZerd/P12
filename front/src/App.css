@@ -35,8 +35,10 @@ aside{
 }
 #Bonjour {
   font-weight: 500;
-  width:fit-content;
-  margin-left: 374px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 13%;
+  
  
 }
 #Calories,

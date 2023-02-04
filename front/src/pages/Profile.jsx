@@ -38,7 +38,6 @@ function Profile() {
         
 
 
-        console.log(score)
 
         
         
@@ -48,10 +47,15 @@ return(
     {user.keyData ? 
         <div>
             <Header />
+            <div style={{display:"flex", justifyContent: "left"}}>
             <Bonjour userInfos = {user.userInfos} todayScore = {user.todayScore}/>
+
             <InsentiveSentence score = {user.score} todayScore = {user.todayScore}/>
+            </div>
         <div className="flexMain">
+            
             <Aside />
+            
             <BarChartScore activity = {activity.sessions}/>
 
             <div className="categories">

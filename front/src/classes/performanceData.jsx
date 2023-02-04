@@ -7,19 +7,19 @@
 
 
 const newKind = {
-	1: "6",
-	2: "5",
+	1: "1",
+	2: "2",
 	3: "4",
 	4: "3",
-	5: "2",
-	6: "1",
+	5: "5",
+	6: "6",
 };
     
 const translateKind = {
     6: 'Cardio',
     5: 'Energie',
-    4: 'Endurance',
-    3: 'Force',
+    4: 'Force',
+    3: 'Endurance',
     2: 'Vitesse',
     1:'Intensité',
 }

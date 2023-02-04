@@ -11,24 +11,9 @@ export default function Gaugechart (props) {
 
 
   
-    const CustomLabel = props => {
-        return (
-          <g>
-            
-            <text fill="#111" y={110} x={120} fontSize={18} fontWeight={700}>
-              {props.value}  % 
-            </text>
-            <text  y={145} x={110} fill="#74798C" fontSize={18} fontWeight={700} >
-              de votre 
-            </text>
-            <text  y={170} x={112} fill="#74798C" fontSize={18} fontWeight={700}>
-              objectif
-            </text>
-          </g>
-        );
-      };
+    
 
-    console.log(props.score)
+    console.log(props.score[0].todayScore)
     return (
         <div className="gaugechart"  style={{ width: '263px', height: "258px",}}>
       <ResponsiveContainer >
@@ -41,12 +26,20 @@ export default function Gaugechart (props) {
           <RadialBar
             cornerRadius={5}
             minAngle={65}
-           label={CustomLabel}
+          
             clockWise
             dataKey="todayScore" 
             fill='#FF0000'
             
           /> 
+
+          <text fill="#111" y={105} x={118} fontSize={18} fontWeight={700}>{props.score[0].todayScore} %</text>
+          <text  y={130} x={101} fill="#74798C" fontSize={18} fontWeight={700} >
+              de votre 
+            </text>
+            <text  y={149} x={104} fill="#74798C" fontSize={18} fontWeight={700}>
+              objectif
+            </text>
           <text
         x={30}
         y={33}

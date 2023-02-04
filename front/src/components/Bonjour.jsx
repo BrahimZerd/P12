@@ -5,9 +5,12 @@ import PropTypes from 'prop-types';
   */
 function Bonjour(props) {
 return(
-    <div id="Bonjour">
+  
+ 
+    <div id="Bonjour" >
          {props.userInfos ? <p >Bonjour <span className="red">{props.userInfos.firstName}</span></p> : true}
     </div>
+    
 )}
 
 Bonjour.propTypes = {
