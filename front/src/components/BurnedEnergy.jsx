@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
  * @param {Object} props is the object that countain the icon of the element and the number of that element, that display the total of category burned
   */
 function EnergyIndicator (props) {
+    
     return(
         <div className={props.product}>
             <div id={props.product}>
@@ -18,7 +19,10 @@ function EnergyIndicator (props) {
 }
 
 EnergyIndicator.propTypes = {
-    props: PropTypes.object,
+    product: PropTypes.string,
+    icon: PropTypes.string,
+    amount: PropTypes.number,
+    unit: PropTypes.string,
 }
 
 export default EnergyIndicator;

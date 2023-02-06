@@ -10,10 +10,9 @@ import PropTypes from 'prop-types';
 export default function Gaugechart (props) {
 
 
-  
+ 
     
 
-    console.log(props.score[0].todayScore)
     return (
         <div className="gaugechart"  style={{ width: '263px', height: "258px",}}>
       <ResponsiveContainer >
@@ -57,6 +56,8 @@ export default function Gaugechart (props) {
 
 
   Gaugechart.propTypes =  {
-    props: PropTypes.object,
-    score: PropTypes.array
+    score: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number,
+      todayScore: PropTypes.number,
+    }))
   }

@@ -13,7 +13,6 @@ function insentiveSentence (props){
 }
 
 insentiveSentence.propTypes = {
-    props: PropTypes.object,
     score: PropTypes.number,
     todayScore: PropTypes.number
 }

@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
   */
   
    export default function BarChartScore(props) {     
+    console.log(props.activity)
     const CustomTooltip = ({ active, payload }) => {
       if (active && payload && payload.length) {
         return (
@@ -56,6 +57,11 @@ import PropTypes from 'prop-types';
 
 
   BarChartScore.propTypes = {
-    props: PropTypes.object,
-    activity: PropTypes.array
+    
+    activity: PropTypes.arrayOf(PropTypes.shape({
+      day: PropTypes.number,
+      poids: PropTypes.number,
+      calories: PropTypes.number,
+
+    }))
   }

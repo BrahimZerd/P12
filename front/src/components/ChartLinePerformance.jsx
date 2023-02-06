@@ -9,8 +9,8 @@ import PropTypes from 'prop-types';
   */
 
 export default function ChartLine(props) {
-   
   const CustomTooltip = ({ active, payload }) => {
+
     if (active && payload && payload.length) {
       return (
           <div className="custom-tooltip">
@@ -38,6 +38,11 @@ export default function ChartLine(props) {
 
 
   ChartLine.propTypes = {
-    props: PropTypes.object,
-    array: PropTypes.array,
+   
+    array: PropTypes.arrayOf(PropTypes.shape({
+      day: PropTypes.string,
+      sessionLength: PropTypes.number,
+    })),
+    
+
   }

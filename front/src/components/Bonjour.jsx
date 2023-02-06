@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
  * @param {Object} props is the object that countain the user basic infos like firstName 
   */
 function Bonjour(props) {
+  
 return(
   
  
@@ -14,7 +15,11 @@ return(
 )}
 
 Bonjour.propTypes = {
-    props: PropTypes.object,
-    
+    userInfos: PropTypes.shape({
+      firstName: PropTypes.string,
+      lastName: PropTypes.string,
+      age: PropTypes.number
+
+    }),
   }
 export default Bonjour;

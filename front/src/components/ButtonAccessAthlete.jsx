@@ -18,8 +18,13 @@ function ButtonAccess (props) {
 
 
 ButtonAccess.propTypes= {
-    props: PropTypes.object,
-    firstName: PropTypes.string
+    id: PropTypes.number,
+    userInfos: PropTypes.shape({
+        firstName: PropTypes.string,
+        lastName: PropTypes.string,
+        age: PropTypes.number
+    }),
+    
 }
 
 

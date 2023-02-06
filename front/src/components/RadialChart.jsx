@@ -11,12 +11,13 @@ import PropTypes from 'prop-types';
 
 
 export default function RadialBarChart (props){
+  console.log(props.performance.data)
   //custom polarangleaxis for a better display of kinds elements
   function renderPolarAngleAxis({ payload, x, y, cx, cy, ...rest }) {
     return (
       <text
         {...rest}
-        verticalAnchor="middle"
+        verticalanchor="middle"
         y={y + (y - cy) / 12}
         x={x + (x - cx) / 2000}
       >
@@ -42,7 +43,14 @@ export default function RadialBarChart (props){
 
 
 RadialBarChart.propTypes = {
-  props: PropTypes.object,
-  performance: PropTypes.object,
-  data: PropTypes.array
+  
+  performance: PropTypes.shape({
+    data: PropTypes.arrayOf(PropTypes.shape({
+      kind: PropTypes.string,
+      value: PropTypes.number,
+    })),
+  }),
+  kind: PropTypes.shape({
+    number: PropTypes.string,
+  }),
 }
